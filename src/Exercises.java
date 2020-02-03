@@ -187,7 +187,17 @@ public class Exercises {
 				}
 
 	public boolean balance(ArrayList<Integer> numbers) {
-		// write your code here
+		if (numbers == null || numbers.size() < 2) {
+			return false;
+		}
+
+		for (int i = 0; i < numbers.size() - 1; i++) {
+			int jSum = 0;
+			int kSum = 0;
+
+			for (int j = i; j >= 0; j--) {
+				jSum += numbers.get(j);
+			}
 
 		return false;	// default return value to ensure compilation
 	}
