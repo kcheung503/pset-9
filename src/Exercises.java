@@ -130,7 +130,7 @@ public class Exercises {
 
 		boolean lastPos = false;
 		int gap = 0;
-		
+
 		for (int i = 0; i < numbers.size(); i++) {
 					if (numbers.get(i) == x) {
 						lastPos = true;
@@ -153,7 +153,21 @@ public class Exercises {
 			}
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
-		// write your code here
+		if (numbers == null || numbers.size() < 3) {
+			return false;
+		}
+
+		int remainder = -1;
+		int prevRemainder = -1;
+		int inARow = 0;
+		for (int i = 0; i < numbers.size(); i++) {
+			remainder = numbers.get(i) % 2;
+			if (remainder == 1) {
+				if (prevRemainder == 1) {
+					inARow++;
+				} else {
+					inARow = 1;
+				}
 
 		return false;	// default return value to ensure compilation
 	}
