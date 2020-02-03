@@ -124,7 +124,12 @@ public class Exercises {
 			}
 
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
-		// write your code here
+		if (numbers == null || numbers.size() < 1) {
+			return false;
+		}
+
+		boolean lastPos = false;
+		int gap = 0;
 
 		return false;	// default return value to ensure compilation
 	}
