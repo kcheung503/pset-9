@@ -182,7 +182,6 @@ public class Exercises {
 
 						prevRemainder = remainder;
 					}
-
 					return false;
 				}
 
@@ -198,9 +197,16 @@ public class Exercises {
 			for (int j = i; j >= 0; j--) {
 				jSum += numbers.get(j);
 			}
+			for (int k = i + 1;  k < numbers.size(); k++) {
+							kSum += numbers.get(k);
+						}
 
-		return false;	// default return value to ensure compilation
-	}
+						if (jSum == kSum) {
+							return true;
+						}
+					}
+					return false;
+				}
 
 	public int clumps(ArrayList<String> values) {
 		// write your code here
