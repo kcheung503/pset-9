@@ -63,8 +63,17 @@ public class Exercises {
 		int midIndex = (int)(Math.ceil(numbers.size() / 2));
 		double max = -1;
 
-		return -1;		// default return value to ensure compilation
-	}
+		for (int i = 0; i < numbers.size(); i++) {
+					if (numbers.get(i) < 0) {
+						return -1;
+					}
+
+					if ((i == 0 || i == numbers.size() - 1|| i == midIndex) && numbers.get(i) > max) {
+						max = numbers.get(i);
+					}
+				}
+				return max;
+			}
 
 	public ArrayList<String> middle(ArrayList<String> values) {
 		// write your code here
