@@ -91,7 +91,6 @@ public class Exercises {
 				returnMe.add(values.get(midIndex - 1));
 				returnMe.add(values.get(midIndex));
 				returnMe.add(values.get(midIndex + 1));
-
 				return returnMe;
 			}
 
@@ -103,8 +102,26 @@ public class Exercises {
 		int counter = 0;
 		int currentNum = -1;
 
-		return false;	// default return value to ensure compilation
-	}
+		for (int i = 0; i < numbers.size(); i++) {
+					if (i == 0) {
+						counter = 1;
+						currentNum = numbers.get(i);
+					}
+
+					if (numbers.get(i) == currentNum + 1) {
+						counter++;
+						currentNum = numbers.get(i);
+					} else {
+						counter = 1;
+						currentNum = numbers.get(i);
+					}
+
+					if (counter == 3) {
+						return true;
+					}
+				}
+				return false;
+			}
 
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
 		// write your code here
