@@ -13,7 +13,15 @@ public class Exercises {
 	}
 
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
-		// write your code here
+		if (values == null || values.size() < n || n <= 0) {
+			return new ArrayList<String>();
+		}
+
+		ArrayList<String> returnMe = new ArrayList<String>();
+		for (int i = 0; i < n; i++) {
+			returnMe.add(i, values.get(i));
+		}
+
 
 		return null;	// default return value to ensure compilation
 	}
