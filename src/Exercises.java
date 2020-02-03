@@ -31,7 +31,12 @@ public class Exercises {
 			}
 
 	public int difference(ArrayList<Integer> numbers) {
-		// write your code here
+		if (numbers == null || numbers.size() < 1) {
+			return -1;
+		}
+
+		int max = 0;
+		int min = 0;
 
 		return -1;		// default return value to ensure compilation
 	}
