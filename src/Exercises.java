@@ -168,9 +168,23 @@ public class Exercises {
 				} else {
 					inARow = 1;
 				}
+			} else {
+							if (prevRemainder == 0) {
+								inARow++;
+							} else {
+								inARow = 1;
+							}
+						}
 
-		return false;	// default return value to ensure compilation
-	}
+						if (inARow == 3) {
+							return true;
+						}
+
+						prevRemainder = remainder;
+					}
+
+					return false;
+				}
 
 	public boolean balance(ArrayList<Integer> numbers) {
 		// write your code here
