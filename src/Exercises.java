@@ -222,7 +222,20 @@ public class Exercises {
 		boolean prevSame = false;
 		String previous = "";
 		int clumps = 0;
+		
+		for (int i = 0; i < values.size(); i++) {
+					if (previous.equals(values.get(i))) {
+						isSame = true;
+						if (prevSame != true) {
+							clumps++;
+						}
+					} else {
+						isSame = false;
+					}
+					previous = values.get(i);
+					prevSame = isSame;
+				}
 
-		return -1;		// default return value to ensure compilation
-	}
-}
+				return clumps;
+			}
+		}
