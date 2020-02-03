@@ -9,7 +9,7 @@ public class Exercises {
 		if (a.get(0) == b.get(0) || a.get(a.size() - 1) == b.get(b.size() - 1)) {
 			return true;
 		}
-		return false;	// default return value to ensure compilation
+		return false;
 	}
 
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
@@ -22,9 +22,13 @@ public class Exercises {
 			returnMe.add(i, values.get(i));
 		}
 
-
-		return null;	// default return value to ensure compilation
-	}
+		int index = n;
+				for (int i = values.size() - n;  i < values.size(); i++) {
+					returnMe.add(index, values.get(i));
+					index++;
+				}
+				return returnMe;
+			}
 
 	public int difference(ArrayList<Integer> numbers) {
 		// write your code here
