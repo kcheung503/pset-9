@@ -85,9 +85,15 @@ public class Exercises {
 				return new ArrayList<String>();
 			}
 		}
+		
+		int midIndex = (int)(Math.ceil(values.size() / 2));
+				ArrayList<String> returnMe = new ArrayList<String>();
+				returnMe.add(values.get(midIndex - 1));
+				returnMe.add(values.get(midIndex));
+				returnMe.add(values.get(midIndex + 1));
 
-		return null;	// default return value to ensure compilation
-	}
+				return returnMe;
+			}
 
 	public boolean increasing(ArrayList<Integer> numbers) {
 		// write your code here
