@@ -130,9 +130,27 @@ public class Exercises {
 
 		boolean lastPos = false;
 		int gap = 0;
+		
+		for (int i = 0; i < numbers.size(); i++) {
+					if (numbers.get(i) == x) {
+						lastPos = true;
+						gap = 0;
+					} else {
+						if (i == 1 && lastPos == false) {
+							return false;
+						} else if (lastPos == false) {
+							gap++;
+						}
+						lastPos = false;
+					}
 
-		return false;	// default return value to ensure compilation
-	}
+					if (gap == 2) {
+						return false;
+					}
+				}
+
+				return true;
+			}
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
 		// write your code here
